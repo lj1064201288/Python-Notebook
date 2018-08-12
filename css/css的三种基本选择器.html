@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的三种基本选择器</title>
+    <style>
+        /*标签选择器 通过标签来设置元素的样式 影响范围最大*/
+       /* .类选择器 通过class类命名来设置元素的样式 影响范围可控制相对较小*/
+        #box3{
+            width:100px;
+            height:100px;
+            background-color:blue;
+        }
+        .item1{
+            width:200px;
+            height:200px;
+            background-color:red;
+        }
+        .item2{
+            width:100px;
+            height:100px;
+            /*设置边框*/
+            border:10x solid red;
+        }
+        .bg{
+            background-color:deeppink;
+        }
+        #box1{
+            width:300px;
+            height:300px;
+            background-color:blue;
+        }
+        #box2{
+            width:100px;
+            height:100px;
+            /*设置边框*/
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1" id="box3"></div>
+    <div class="item2 bg"></div>
+    <div class="item1"></div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布尔值类型转换</title>
+</head>
+<body>
+    <script>
+        //Boolean()转换成布尔值为false的情况
+            // 字符串转布尔值 为false空字符串
+        var str='1asdasd';
+        console.log(Boolean(str));
+
+        // 数值类型转换为布尔值 为false 0,0.0,NaN
+        // 注意:负数也是true
+        //var num=1;
+        //var num=NaN;
+        // var num=0;
+        // var num=0.0;
+         var num=-1;
+        console.log(Boolean(num));
+
+        // 对象转换为布尔 为false null;
+        var obj={name:'ll',age:24};
+        console.log(obj,typeof(obj));
+        console.log(Boolean(obj));
+    </script>
+</body>
+</html>

@@ -14,6 +14,11 @@ if __name__ == '__main__':
         "wd": wd
     }
 
+    header = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36',
+        'Host':'baidu.com'
+    }
+
     # 转换url编码
     qs = parse.urlencode(qs)
     print(qs)
@@ -21,9 +26,11 @@ if __name__ == '__main__':
     fullurl = url + qs
     print(fullurl)
 
+    rep = request.Request(url=fullurl,headers=header, method='POST')
+
     # 如果直接用可读的带参数的url, 是不能访问的
 
-    rsp = request.urlopen(fullurl)
+    rsp = request.urlopen(rep)
 
     html = rsp.read()
 
